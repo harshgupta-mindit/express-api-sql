@@ -40,7 +40,10 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize= sequelize;
 
+
+// Passing the "sequelize" and "DataTypes" for creating schema for profile table
 db.profile = require("./profileModel")(sequelize, DataTypes);
+
 
 db.sequelize.sync({force: false}).then(()=> {
     console.log("DB ----- reSync Done ---------");
@@ -49,4 +52,7 @@ db.sequelize.sync({force: false}).then(()=> {
 })
 
 
+
+// Exporting all feature of data which is going to be used for CRUD in 
+// controllers.
 module.exports = db;

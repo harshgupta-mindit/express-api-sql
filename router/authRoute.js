@@ -1,6 +1,8 @@
+// Initialize express to define route
 const express = require("express");
 const app = express();
 
+// JWT token function
 const {validateToken} = require("../JWT");
 
 const AuthController = require('../controller/authController');

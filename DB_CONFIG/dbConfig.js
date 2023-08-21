@@ -4,10 +4,11 @@
 //        provide separatly.
 
 module.exports = {
-    HOST: 'localhost',
-    USER: 'root',
-    PASSWORD: 'admin',
-    DB: 'sequelize_v4',
+    HOST: '1',
+    PORT: "",
+    USER: '',
+    PASSWORD: '@',
+    DB: '',
     dialect: 'mysql',
     pool: {
         max: 5,
