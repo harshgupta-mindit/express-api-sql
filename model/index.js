@@ -34,17 +34,25 @@ sequelize.authenticate().then(() => {
 })
 
 
-
+// Database reference to store and manage the complete api with sequelize and database
 const db = {};
-
+// Passing instance of "Sequelize"
 db.Sequelize = Sequelize;
+// Passing the database credentials 
 db.sequelize= sequelize;
+
 
 
 // Passing the "sequelize" and "DataTypes" for creating schema for profile table
 db.profile = require("./profileModel")(sequelize, DataTypes);
 
 
+
+// This method has no effect on the database since the "force: false" doesn't do
+// anything with the database table
+
+// but if it becomes "force: true" then it will drop the table first then create
+//  the table according to the schema we provided.
 db.sequelize.sync({force: false}).then(()=> {
     console.log("DB ----- reSync Done ---------");
 }).catch((err)=> {

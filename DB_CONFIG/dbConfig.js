@@ -4,11 +4,11 @@
 //        provide separatly.
 
 module.exports = {
-    HOST: '1',
-    PORT: "",
-    USER: '',
-    PASSWORD: '@',
-    DB: '',
+    HOST: '103.178.248.62',
+    PORT: "3306",
+    USER: 'mindit_dev',
+    PASSWORD: 'Password@1234',
+    DB: 'db_harshguptatraining',
     dialect: 'mysql',
     pool: {
         max: 5,

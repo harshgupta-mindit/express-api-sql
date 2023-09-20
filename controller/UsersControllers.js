@@ -10,11 +10,15 @@ const getUsers = async (req, res) => {
     }).catch((e)=> {
         res.send("Error in fetching data!!");
     });
-
     res.status(200).json({
         ...allProfiles
     });
 }   
+
+
+const deleteProfile = async (req, res) => {
+    await Profile.destroy()
+}
 
 module.exports = {
     getUsers

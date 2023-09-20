@@ -38,6 +38,10 @@ const userLogin = async (req, res) => {
                 message: "Logged in success",
                 data
             });
+
+            setTimeout(()=> {
+                res.redirect('/profile')
+            }, 2000)
         }
         else {
             res.status(200).json({
@@ -50,7 +54,6 @@ const userLogin = async (req, res) => {
 
 
 const userRegister = async (req, res) => {
-
 
     const userData = JOI.object({
         username: JOI.string().alphanum().min(3).max(10).required(),
